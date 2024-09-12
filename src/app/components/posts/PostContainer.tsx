@@ -1,7 +1,7 @@
 import React from 'react'
 
 type Post = {
-    id: string;
+    id: number;
     title: string;
     body: string;
 }
