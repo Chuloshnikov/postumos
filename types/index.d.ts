@@ -16,3 +16,9 @@ interface Comment {
       id: string;
     };
   }
+
+  interface PostParams {
+    params: {
+      id: number;
+    };
+  }
