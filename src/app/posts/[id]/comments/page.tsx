@@ -17,11 +17,14 @@ interface Comment {
     const comments: Comment[] = await response.json();
   
     return (
-      <div>
-        <h1>Comments for Post {id}</h1>
+      <div className="px-4">
+        <h1 className="text-2xl mb-2">Comments for Post {id}</h1>
         <ul>
           {comments.map((comment) => (
-            <li key={comment.id}>
+            <li 
+            className="border-2 border-gray-200 p-4 mb-2 rounded-md"
+            key={comment.id}
+            >
               <h2>{comment.name}</h2>
               <p>{comment.body}</p>
             </li>

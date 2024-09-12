@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import PostInfo from '@/app/components/posts/PostInfo';
 import React from 'react'
 
 interface Post {
@@ -21,14 +21,8 @@ export default async function Post({ params }: PostParams) {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
   const post: Post[] = await response.json();
   return (
-    <div>
-      {post.userId}
-      {post.id}
-      {post.title}
-      {post.body}
-      <Link href={`${id}/comments`}>
-        Comments
-      </Link>
-    </div>
+   <div className='px-2'>
+      <PostInfo postInfo={post}/>
+   </div>
   )
 }
