@@ -1,3 +1,4 @@
+import PostContainer from "./components/posts/PostContainer";
 
 interface Post {
   id: number;
@@ -13,7 +14,11 @@ export default async function Home() {
   console.log(posts);
   return (
     <div>
-      fdgdgdgdghfghfgh
+       <ul>
+        {posts.map((post) => (
+          <PostContainer key={post.id} {...post}/>
+        ))}
+      </ul>
     </div>
   );
 }
