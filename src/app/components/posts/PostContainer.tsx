@@ -1,13 +1,6 @@
 import Link from 'next/link';
 import React from 'react'
 
-type Post = {
-    id: number;
-    userId: number;
-    title: string;
-    body: string;
-}
-
 const PostContainer = (post: Post) => {
   return (
     <li 

@@ -1,16 +1,4 @@
-interface Comment {
-    id: number;
-    name: string;
-    body: string;
-  }
-  
-  interface CommentsPageProps {
-    params: {
-      id: string;
-    };
-  }
-  
-  export default async function CommentsPage({ params }: CommentsPageProps) {
+export default async function CommentsPage({ params }: CommentsPageProps) {
     const { id } = params;
   
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`);

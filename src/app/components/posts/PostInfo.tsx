@@ -1,19 +1,9 @@
 "use client"
 import Link from 'next/link';
-import { useTheme } from '../theme/ThemeContext';
 
 
+const PostInfo = ({postInfo}: {postInfo: Post}) => {
 
-type Post = {
-    id: number;
-    userId: number;
-    title: string;
-    body: string;
-}
-
-const PostInfo = ({postInfo}) => {
-
-    const { theme, toggleTheme } = useTheme();
 
   return (
     <div className='border-gray-200 flex flex-col gap-4'>
