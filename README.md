@@ -11,6 +11,8 @@ npm i
 # or
 yarn add
 
+to run project
+
 npm run dev
 # or
 yarn dev
