@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 type Post = {
@@ -9,8 +10,11 @@ type Post = {
 const PostContainer = (post: Post) => {
   return (
     <li key={post.id}>
+      <Link href={`/posts/${post.id}`}>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
+      </Link>
+        
     </li>
   )
 }
